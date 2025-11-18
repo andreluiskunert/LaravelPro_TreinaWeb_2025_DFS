@@ -1,0 +1,33 @@
+na segunda-feira fiz uma revisão e funciono
+App\Models\Frete {#944 ▼ // app/Http/Controllers/RastreamentoController.php:17
+  #connection: "sqlite"
+  #table: "fretes"
+  #primaryKey: "id"
+  #keyType: "int"
+  +incrementing: true
+  #with: []
+  #withCount: []
+  +preventsLazyLoading: false
+  #perPage: 15
+  +exists: true
+  +wasRecentlyCreated: false
+  #escapeWhenCastingToString: false
+  #attributes: array:8 [▶]
+  #original: array:8 [▶]
+  #changes: []
+  #casts: []
+  #classCastCache: []
+  #attributeCastCache: []
+  #dateFormat: null
+  #appends: []
+  #dispatchesEvents: []
+  #observables: []
+  #relations: []
+  #touches: []
+  +timestamps: true
+  +usesUniqueIds: false
+  #hidden: []
+  #visible: []
+  #fillable: []
+  #guarded: array:1 [▶]
+}
