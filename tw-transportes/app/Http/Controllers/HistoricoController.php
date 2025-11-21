@@ -10,11 +10,10 @@ class HistoricoController extends Controller
 {
     /**
      * Handle the incoming request.
-     * Sexta-feira,21/11/2025_de manha
      */
     public function __invoke(Request $request)
     {
-        $telefone = preg_replace('/\D/', '', $request->input('telefone', '')) ;
+        $telefone = $request->input('telefone', '') ;
 
         $cliente = Cliente::where('telefone', $telefone)
                             ->with('enviados', 'recebidos')
