@@ -18,6 +18,7 @@ class HistoricoController extends Controller
         $cliente = Cliente::where('telefone', $telefone)
                             ->with('enviados', 'recebidos')
                             ->first();
+                            // estão com problema na linha acima que é a linha 29
 
         if (! $cliente) {
             return redirect()->back()->with('error', 'Cliente não encontrado');
