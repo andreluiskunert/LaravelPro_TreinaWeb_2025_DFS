@@ -20,6 +20,14 @@
                 </a>
             </div>
         </nav>
+            @if (session('error'))
+            <div class="container mx-auto px-4 pt-20"> 
+                <div class="bg-red-100 border border-r-red-400 text-red-700 px-4 py-3 rounded-relaite" role="alert"></div>
+              <strong class="font-bold">Erro!</strong>
+              <span class="block sm:inline"> {{ session('error')}} </span>
+
+            </div>
+            @endif
 
         <div class="container mx-auto px-4 pt-16">
           {{ $slot }}
