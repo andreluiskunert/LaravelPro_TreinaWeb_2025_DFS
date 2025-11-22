@@ -23,7 +23,7 @@ class HistoricoController extends Controller
         if (! $cliente) {
             return redirect()->back()->with('error', 'Cliente não encontrado');
         }
-
+// Sabado de Tarde _descansar
 
         return view('frete.historico', [
             'cliente' => $cliente
