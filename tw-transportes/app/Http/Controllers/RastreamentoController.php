@@ -21,6 +21,7 @@ class RastreamentoController extends Controller
         if(! $frete) {
             return redirect()->back()->with('error', 'frete não encontrado....');
         }
+            //  estou revendo aulas pra entender melhor e fazerndo algumas correções 
     
         return view('frete.rastreamento', [
             'frete' => $frete

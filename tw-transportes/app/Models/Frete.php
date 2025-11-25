@@ -11,6 +11,7 @@ class Frete extends Model
     public function etapas():HasMany
     {
         return $this-> hasMany(Etapa::class);
+        //  estou revendo aulas pra entender melhor e fazerndo algumas correções 
     }
 
 }
