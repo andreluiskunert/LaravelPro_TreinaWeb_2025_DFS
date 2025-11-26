@@ -21,6 +21,7 @@
                 </a>
             </div>
         </nav>
+        {{-- Estou revisando... --}}
 
         <div class="container mx-auto px-4 pt-16">
             <div class="min-h-[calc(100vh-4rem)] flex flex-col md:grid md:grid-cols-2">
