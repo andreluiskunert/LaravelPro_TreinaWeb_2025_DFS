@@ -7,11 +7,17 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Frete extends Model
 {
-    //
-    public function etapas():HasMany
-    {
-        return $this-> hasMany(Etapa::class);
-        //  estou revendo aulas pra entender melhor e fazerndo algumas correções 
-    }
+    protected $fillable = [
+        'origem',
+        'destino',
+        'codigo_rastreio',
+        'remetente_id',
+        'destinatario_id',
+        'status', // 👈 adicionamos o status
+    ];
 
+    public function etapas(): HasMany
+    {
+        return $this->hasMany(Etapa::class);
+    }
 }
