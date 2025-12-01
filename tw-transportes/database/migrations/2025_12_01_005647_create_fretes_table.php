@@ -12,18 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('fretes', function (Blueprint $table) {
-            $table->id();
+             $table->id();
             $table->string('origem');
             $table->string('destino');
             $table->string('codigo_rastreio')->unique();
             $table->string('status');
-            // Criar as chaves:----
+
             $table->foreignId('remetente_id')->constrained('clientes')->onDelete('cascade');
             $table->foreignId('destinatario_id')->constrained('clientes')->onDelete('cascade');
-            // --- //
-            $table->timestamps();
-            
 
+            $table->timestamps();
         });
     }
 
