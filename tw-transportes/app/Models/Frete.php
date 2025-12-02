@@ -21,3 +21,4 @@ class Frete extends Model
         return $this->hasMany(Etapa::class);
     }
 }
+// já fiz... apenas 
