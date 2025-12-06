@@ -13,19 +13,12 @@ class HistoricoController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $telefone = $request->input('telefone', '') ;
+        $telefone = preg_replace('/\D/', '', $request->input('telefone', '')) ;
 
-        $cliente = Cliente::where('telefone', $telefone)
-                            ->with('enviados', 'recebidos')
-                            ->first();
-                            // estão com problema na linha acima que é a linha 29
-
+        $cliente = Cliente::where('telefone', $telefone)->with('enviados', 'recebidos')->first();
         if (! $cliente) {
             return redirect()->back()->with('error', 'Cliente não encontrado');
-        }
-// Sabado de Tarde _descansar
-
-        return view('frete.historico', [
+        }  return view('frete.historico', [
             'cliente' => $cliente
         ]);
     }
