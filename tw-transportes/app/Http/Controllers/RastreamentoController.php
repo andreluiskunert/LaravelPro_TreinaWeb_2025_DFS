@@ -13,11 +13,12 @@ class RastreamentoController extends Controller
     public function __invoke(Request $request)
     {   
         // Quarta-feira, 19/11/2025 de Noite
-        $codigoRastreio = $request->input('codigo_rastreio', '');
+        $codigoRastreio = $request->input('codigo_rastreio', '');  // Revisão:Sabado 06/12/2025_noite 
         $frete = Frete::where('codigo_rastreio', $codigoRastreio)
         ->with('etapas')
         ->first();
         // 
+         // Revisão:Sabado 06/12/2025_noite 
         if(! $frete) {
             return redirect()->back()->with('error', 'frete não encontrado....');
         }

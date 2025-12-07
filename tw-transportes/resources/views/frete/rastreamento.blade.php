@@ -37,7 +37,7 @@
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                     {{ $etapa->create_at}}
-                    {{-- Revisão: Sábado,06/12/2025 --}}
+                    {{-- Revisão: Sábado,06/12/2025  De noite --}}
                 </td>
             </tr>
         @endforeach
