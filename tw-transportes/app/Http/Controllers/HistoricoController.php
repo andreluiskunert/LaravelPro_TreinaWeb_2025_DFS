@@ -16,7 +16,7 @@ class HistoricoController extends Controller
         $telefone = $request->input('telefone', '');
 
         $cliente = Cliente::where('telefone', $telefone)
-         ->with('enviados', 'recebidos')
+        ->with('enviados', 'recebidos')
         ->first();
         if(! $cliente) {
             return redirect()->back()->with('error', 'Cliente não encontrado');
