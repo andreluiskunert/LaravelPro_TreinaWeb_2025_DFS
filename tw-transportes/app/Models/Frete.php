@@ -21,4 +21,4 @@ class Frete extends Model
         return $this->hasMany(Etapa::class);
     }
 }
-// já fiz... apenas 
+// já fiz... apenas revisão de código_Domingo, 14/12/2025_De noite

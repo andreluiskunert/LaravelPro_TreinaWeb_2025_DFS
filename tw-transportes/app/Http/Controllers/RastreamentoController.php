@@ -15,7 +15,7 @@ class RastreamentoController extends Controller
         // Quarta-feira, 19/11/2025 de Noite
         $codigoRastreio = $request->input('codigo_rastreio', '');  // Revisão:Sabado 06/12/2025_noite 
         $frete = Frete::where('codigo_rastreio', $codigoRastreio)
-        ->with('etapas')
+        ->with('enviados', 'recebidos')
         ->first();
         // 
          // Revisão:Sabado 06/12/2025_noite 
@@ -26,7 +26,7 @@ class RastreamentoController extends Controller
     
         return view('frete.rastreamento', [
             'frete' => $frete
-        ]
-    );
+        ]);
     }
 }
+// já fiz... apenas revisão de código_Domingo, 14/12/2025_De noite
