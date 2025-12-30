@@ -8,10 +8,11 @@ class HomeController
 {
     /**
      * Handle the incoming request.
+     * Terça-feira, 30/12/2025_Revisão de Manhã
      */
     public function __invoke(Request $request)
     {
-        // Domingo 28/12/2025_
+        //
         return view('home');
     }
 }
