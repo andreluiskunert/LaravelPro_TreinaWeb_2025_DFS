@@ -32,7 +32,6 @@
 
         <div class="container mx-auto px-4 pt-16">
             {{ $slot }}
-            {{-- revisando códigos pra correção de erros  --}}
         </div>
     </body>
 </html>
