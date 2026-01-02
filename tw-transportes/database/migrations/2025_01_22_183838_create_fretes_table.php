@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('fretes', function (Blueprint $table) {
             $table->id();
+            $table->string('origem');
+            $table->string('destino');
+            $table->string('codigo_rastreio')->unique();
+            $table->string('status');
+
+            $table->foreignId('remetente_id')->constrained('clientes')->onDelete('cascade');
+            $table->foreignId('destinatario_id')->constrained('clientes')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
