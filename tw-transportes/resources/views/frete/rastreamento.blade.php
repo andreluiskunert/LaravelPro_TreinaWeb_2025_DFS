@@ -5,16 +5,16 @@
                 Rastreamento Encomenda
             </h1>
             <p class="mt-4 text-lg">
-                Código de Rastreamento: <span class="font-semibold">{{ "#" }}</span>
+                Código de Rastreamento: <span class="font-semibold">{{ $frete->codigo_rastreio }}</span>
             </p>
             <p class="mt-2">
                 Status: 
-                <span class="px-2 py-1 rounded-full {{"#" }}">
+                <span class="px-2 py-1 rounded-full {{ $frete->status->pegarCorEtiqueta() }}">
                     {{ $frete->status }}
                 </span>
             </p>
             <p class="mt-2">
-                Destino: <span class="font-semibold">{{ "#" }}</span>
+                Destino: <span class="font-semibold">{{ $frete->destino }}</span>
             </p>
         </div>
     
